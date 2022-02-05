@@ -26,43 +26,43 @@ h2 {
   display: -ms-grid;
   display: grid;
   gap: 1.5rem;
+  padding: 5rem 5rem;
   -ms-grid-columns: (1fr)[4];
       grid-template-columns: repeat(4, 1fr);
-      grid-template-areas: "one one two five" "three four four five";
-  padding: 5rem 5rem;
+      grid-template-areas: "area-1 area-1 area-2 area-5" "area-3 area-4 area-4 area-5";
 }
 
 .testimonial .testimonial-article:nth-of-type(1) {
   -ms-grid-row: 1;
   -ms-grid-column: 1;
   -ms-grid-column-span: 2;
-  grid-area: one;
+  grid-area: area-1;
 }
 
 .testimonial .testimonial-article:nth-of-type(2) {
   -ms-grid-row: 1;
   -ms-grid-column: 3;
-  grid-area: two;
+  grid-area: area-2;
 }
 
 .testimonial .testimonial-article:nth-of-type(3) {
   -ms-grid-row: 2;
   -ms-grid-column: 1;
-  grid-area: three;
+  grid-area: area-3;
 }
 
 .testimonial .testimonial-article:nth-of-type(4) {
   -ms-grid-row: 2;
   -ms-grid-column: 2;
   -ms-grid-column-span: 2;
-  grid-area: four;
+  grid-area: area-4;
 }
 
 .testimonial .testimonial-article:nth-of-type(5) {
   -ms-grid-row: 1;
   -ms-grid-row-span: 2;
   -ms-grid-column: 4;
-  grid-area: five;
+  grid-area: area-5;
 }
 
 .testimonial-article {
@@ -239,7 +239,7 @@ h2 {
         grid-template-columns: 100vh;
     -ms-grid-rows: (1fr)[5];
         grid-template-rows: repeat(5, 1fr);
-        grid-template-areas: "one" "two" "three" "four" "five";
+        grid-template-areas: "area-1" "area-2" "area-3" "area-4" "area-5";
   }
 }
 /*# sourceMappingURL=main.css.map */
