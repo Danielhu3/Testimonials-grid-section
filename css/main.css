@@ -68,6 +68,7 @@ h2 {
 .testimonial-article {
   display: -ms-grid;
   display: grid;
+  border-radius: 1rem;
   -ms-grid-columns: 1fr;
       grid-template-columns: 1fr;
       grid-template-areas: "testimonial-profile" "testimonial-content";
