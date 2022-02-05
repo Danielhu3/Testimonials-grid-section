@@ -37,6 +37,10 @@ h2 {
   -ms-grid-column: 1;
   -ms-grid-column-span: 2;
   grid-area: area-1;
+  background-image: url("../images/bg-pattern-quotation.svg");
+  background-repeat: no-repeat;
+  background-position: right top;
+  background-position: 85% 0%;
 }
 
 .testimonial .testimonial-article:nth-of-type(2) {
@@ -65,7 +69,7 @@ h2 {
   grid-area: area-5;
 }
 
-.testimonial-article {
+.testimonial .testimonial-article {
   display: -ms-grid;
   display: grid;
   border-radius: 1rem;
@@ -74,28 +78,32 @@ h2 {
       grid-template-areas: "testimonial-profile" "testimonial-content";
 }
 
-.testimonial-article .testimonial-profile {
+.testimonial .testimonial-article .testimonial-profile {
   -ms-grid-row: 1;
   -ms-grid-column: 1;
   grid-area: testimonial-profile;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  margin: 3.2rem;
+  margin: 3.2rem 3.2rem 1.6rem 3.2rem;
   gap: 1.6rem;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
-.testimonial-article .testimonial-profile .profile-icon {
+.testimonial .testimonial-article .testimonial-profile .profile-icon {
   border-radius: 100%;
+  max-width: 3.2rem;
 }
 
-.testimonial-article .testimonial-profile .profile-info {
+.testimonial .testimonial-article .testimonial-profile .profile-info {
   -ms-flex-item-align: center;
       -ms-grid-row-align: center;
       align-self: center;
 }
 
-.testimonial-article .testimonial-content {
+.testimonial .testimonial-article .testimonial-content {
   -ms-grid-row: 2;
   -ms-grid-column: 1;
   grid-area: testimonial-content;
@@ -110,7 +118,7 @@ h2 {
   gap: 1.6rem;
 }
 
-.testimonial-article .testimonial-content .content-title {
+.testimonial .testimonial-article .testimonial-content .content-title {
   font-size: 2em;
 }
 

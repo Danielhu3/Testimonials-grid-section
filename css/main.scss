@@ -53,50 +53,61 @@ h2 {
     @for $i from 1 through 5 {
       &:nth-of-type(#{$i}) {
         grid-area: area-#{$i};
+
+        @if $i == 1 {
+          background-image: url("../images/bg-pattern-quotation.svg");
+          background-repeat: no-repeat;
+          background-position: right top;
+          background-position: 85% 0%;
+        }
       }
     }
   }
-}
 
-// Positioning elements
-.testimonial-article {
-  display: grid;
-  border-radius: 1rem;
+  // Positioning elements
+  .testimonial-article {
+    display: grid;
+    border-radius: 1rem;
 
-  grid-template-columns: 1fr;
+    grid-template-columns: 1fr;
 
-  grid-template-areas:
-    "testimonial-profile"
-    "testimonial-content";
+    grid-template-areas:
+      "testimonial-profile"
+      "testimonial-content";
 
-  .testimonial-profile {
-    grid-area: testimonial-profile;
+    .testimonial-profile {
+      grid-area: testimonial-profile;
 
-    display: flex;
+      display: flex;
 
-    margin: 3.2rem;
-    gap: 1.6rem;
+      margin: 3.2rem 3.2rem 1.6rem 3.2rem;
+      gap: 1.6rem;
 
-    .profile-icon {
-      border-radius: 100%;
+      // to centralize items when profile-icon size change
+      align-items: center;
+
+      .profile-icon {
+        border-radius: 100%;
+        max-width: 3.2rem;
+      }
+
+      .profile-info {
+        align-self: center;
+      }
     }
 
-    .profile-info {
-      align-self: center;
-    }
-  }
+    .testimonial-content {
+      grid-area: testimonial-content;
 
-  .testimonial-content {
-    grid-area: testimonial-content;
+      margin: 0 3.2rem 3.2rem 3.2rem;
 
-    margin: 0 3.2rem 3.2rem 3.2rem;
+      display: flex;
+      flex-direction: column;
+      gap: 1.6rem;
 
-    display: flex;
-    flex-direction: column;
-    gap: 1.6rem;
-
-    .content-title {
-      font-size: 2em;
+      .content-title {
+        font-size: 2em;
+      }
     }
   }
 }
